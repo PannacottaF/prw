@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Alteração de Usuario</h1>
+    <h1>Cadastro de Clientes - IFSP</h1>
+    <?php echo "<img class='center' src='data:image/jpeg;base64,"
+    .base64_encode($row["foto"])."'width='150' height='150'/>";?>
     <div id="teste">
-        <form method="post" action="cadastro_usuario.php">
+        <form method="post" action="altera_usuario_exe.php" enctype='multipart/form-data'>
             <fieldset>
                 <legend>Cadastro</legend>
                 <div class="form-item">
@@ -32,6 +34,9 @@
                 <div class="form-item">
                     <label for="telefone">Telefone:</label>
                     <input type="text" id="telefone" name="telefone" value="<?php echo $row['telefone_usuario'] ?>" placeholder="Digite o Telefone">
+                </div>
+                <div class="form-item">
+                    <input type="file" id="foto" name="foto" accept="image/*
                 </div>
                 <div class="form-item">
                     <input id="btn" type="submit" value="Enviar" >
