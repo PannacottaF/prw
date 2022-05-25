@@ -18,10 +18,14 @@
     <table align="center" border="1" width=500>
     <tr>
         <th>Codigo</th>
+        <!--TODO-->
+        <th>Foto</th>
         <th>Nome</th>
         <th>E-mail</th>
         <th>Telefone</th>
+        <th>Excluir</th>
     </tr>
+    
     <?php
         while($row = mysqli_fetch_array($result))
         {

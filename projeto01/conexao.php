@@ -1,4 +1,4 @@
-conexao.php <?php
+<?php
 $hostname = "localhost";
 $port = 3307;
 $username = "root";
