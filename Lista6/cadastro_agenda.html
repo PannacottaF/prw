@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Fromulário de cadastro</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+    <body>
+
+        <header class="center">
+            <h1>Cadastro de agendas - IFSP</h1>
+        </header>
+
+        <div id="osvaldo" align="center">
+            <a href='../index.php' id="espaco"> voltar para a página anterior</a>
+        </div>
+
+        <form method="post" action="cadastro_agenda.php">
+
+            <div class="container">
+                <table class="position" align="center">
+                    <tr>
+                        <td><p>Nome:</p> <input type="text" name="nome" size="50"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Apelido:</p> <input type="text" name="apelido" size="40"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Endereço:</p> <input type="text" name="endereco" size="70"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Bairro:</p> <input type="text" name="bairro" size="50"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Cidade:</p> <input type="text" name="cidade" size="50"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Estado:</p> 
+                            <select name="estado">
+                                <option>AC</option>
+                                <option>AL</option>
+                                <option>AP</option>
+                                <option>AM</option>
+                                <option>BA</option>
+                                <option>CE</option>
+                                <option>DF</option>
+                                <option>ES</option>
+                                <option>GO</option>
+                                <option>MA</option>
+                                <option>MT</option>
+                                <option>MS</option>
+                                <option>MG</option>
+                                <option>PA</option>
+                                <option>PB</option>
+                                <option>PR</option>
+                                <option>PE</option>
+                                <option>PI</option>
+                                <option>RJ</option>
+                                <option>RN</option>
+                                <option>RS</option>
+                                <option>RO</option>
+                                <option>RR</option>
+                                <option>SC</option>
+                                <option>SP</option>
+                                <option>SE</option>
+                                <option>TO</option>
+                            </select><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Telefone:</p> <input type="text" name="telefone" size="15"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Celular:</p> <input type="text" name="celular" size="15"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Email:</p> <input type="text" name="email" size="70"><br></td>
+                    </tr>
+                    <tr>
+                        <td><input id="botao" type="submit" value="Enviar"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+
+</html>
