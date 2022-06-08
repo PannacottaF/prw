@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Formulário de cadastro</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+    <body>
+
+        <header class="center">
+            <h1>Consulta de fluxo de caixa </h1>
+        </header>
+
+        <div id="osvaldo" align="center">
+            <a href='../index.php' id="espaco"> voltar para a página anterior</a>
+        </div>
+
+        <form method="post" action="consulta_fluxo_caixa.php">
+
+            <div class="container">
+                <table class="position" align="center">
+                    
+                    <tr>
+                        <td><p>Tipo:</p> 
+                            <select name="tipo">
+                                <option>Saldo Total</option>
+                                <option>Total Saidas</option>
+                                <option>Total Entradas</option>
+                            </select><br></td>
+                    </tr>
+                    <tr>
+                        <td><input id="botao" type="submit" value="Enviar"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+
+</html>
