@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Consulta</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+    <body>
+
+        <header class="center">
+            <h1>Consulta de fluxos</h1>
+            <hr>
+        </header>
+
+        <div id="pan" align="center">
+            <a href='../index.php' id="espaco"> voltar para a página anterior</a>
+        </div>
+
+        <form method="post" action="consulta_fluxo_caixa.php">
+
+            <div class="container">
+                <div class="container1-1">
+                    <p>Selecione o tipo de consulta:</p>
+                </div>
+                <table class="position2" align="center">
+                    <tr>
+                        <td><input type="radio" name="tipo" value="entrada"> Saldo total
+                                <input type="radio" name="tipo" value="saida"> Total saidas
+                                <input type="radio" name="tipo" value="saldo"> Total entradas<br></td>
+                    </tr>
+                    <tr>
+                        <td><input id="botao" type="submit" value="Enviar"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+
+</html>

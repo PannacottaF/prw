@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Fromulário de cadastro</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+    <body>
+
+        <header class="center">
+            <h1>Cadastro de fluxos</h1>
+            <hr>
+        </header>
+
+        <div id="pan" align="center">
+            <a href='../index.php' id="espaco"> voltar para a página anterior</a>
+        </div>
+
+        <form method="post" action="cadastro_fluxo_caixa.php">
+
+            <div class="container">
+                <div class="container1-1">
+                    <p>Cadastro de fluxos</p>
+                </div>
+                <table class="position" align="center">
+                    <tr>
+                        <td><p>Data:</p> <input type="date" name="data" size="50"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Tipo:</p>  <input type="radio" name="opt" value="Entrada" id="bopt"> Entrada
+                                            <input type="radio" name="opt" value="Saida" id="bopt"> Saida<br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Valor:</p> <input type="number" name="valor" size="40"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Histórico:</p> <input type="text" name="historico" size="150"><br></td>
+                    </tr>
+                    <tr>
+                        <td><p>Cheque:</p> 
+                            <select name="cheque">
+                                <option>Sim</option>
+                                <option>Não</option>
+                            </select><br></td>
+                    </tr>
+                    <tr>
+                        <td><input id="botao" type="submit" value="Enviar"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+
+</html>
