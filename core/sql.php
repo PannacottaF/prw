@@ -49,7 +49,7 @@ function delete(string $entidade, array $criterio = []) : string
     return $expressao;
 }
 
-function select (string $entidade, array $campos, array $criterios = [],
+function select(string $entidade, array $campos, array $criterios = [],
 string $ordem = $null) : string
 {
     $intrucao = "SELECT " . implode(', ' ,$campos);
