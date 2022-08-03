@@ -30,8 +30,43 @@ function update(string $entidade, array $dados, array $criterio = []) : string
             $instrucao .= ' ' . implode(' ', $expressao);
         } 
     }
-    
+
     return $instrucao;
 }
 
+function delete(string $entidade, array $criterio = []) : string
+{
+    $instrucao = "DELETE {$entidade}";
+
+    if(!empty($criterio)){
+        $instrucao .= ' WHERE ';
+
+        foreach($criterio as $expressao){
+            $instrucao .= ' ' . implode(' ', $expressao);
+        }
+    }
+
+    return $expressao;
+}
+
+function select (string $entidade, array $campos, array $criterios = [],
+string $ordem = $null) : string
+{
+    $intrucao = "SELECT " . implode(', ' ,$campos);
+    $instrucao .= "FROM {$entidade}";
+
+    if(!empty($criterio)){
+        $instrucao .= ' WHERE ';
+
+        foreach($criterio as $expressao){
+            $instrucao .= ' ' . implode(' ', $expressao);
+        }
+    }
+
+    if(!empty($ordem)){
+        $instrucao .= " ORDEM BY $ordem ";
+    }
+
+    return $instrucao;
+}
 ?>
