@@ -128,5 +128,11 @@ function deleta(string $entidade, array $criterio = []) : bool
 
     $retorno = (boolean) mysqli_stmt_affected_rows($stmt);
 
-    $_SESSION['errors'] = ysqli_stmt_error_list($stmt);
+    $_SESSION['errors'] = mysqli_stmt_error_list($stmt);
+
+    mysqli_stmt_close($stmt);
+
+    desconecta($conexao);
+
+    return $retorno;
 }
