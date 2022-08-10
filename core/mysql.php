@@ -136,3 +136,24 @@ function deleta(string $entidade, array $criterio = []) : bool
 
     return $retorno;
 }
+
+function buscar(string $entidade, array $campos= ['*'], array $criterio = [],
+string $ordem = null) : array
+{
+    $retorno = false;
+    $coringa_criterio = [];
+
+    foreach ($criterio as $expressao) {
+        $dado = $expressao[count($expressao) - 1] = '?';
+
+        $tipo[] = gettype($dado)[0];
+        $expressao[count($expressao) - 1] = '?';
+        $coringa_criterio[] = $expressao;
+
+        $nome_campo = (count($expressao) < 4) ? $expressao[0] : $expressao[1];
+
+        if(isset($$nome_campo)){
+            
+        }
+    }
+}
