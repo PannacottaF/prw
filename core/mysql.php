@@ -153,7 +153,24 @@ string $ordem = null) : array
         $nome_campo = (count($expressao) < 4) ? $expressao[0] : $expressao[1];
 
         if(isset($$nome_campo)){
-            
+            $nome_campo = $nome_campo . '_' . rand();
         }
+
+        $campos_criterio[] = $nome_campo;
+
+        $$nome_campo = $dado;
+    }
+
+    $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
+
+    $conexao = conecta();
+
+    $stmt = mysqli_prepare($conexao, $instrucao);
+
+    if(isset($tipo)){
+        $comando = 'mysqli_stmt_bind_param'
+        $comando .=
+        $comando .=
+        $comando .=
     }
 }
