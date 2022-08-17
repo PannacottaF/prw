@@ -168,9 +168,30 @@ string $ordem = null) : array
     $stmt = mysqli_prepare($conexao, $instrucao);
 
     if(isset($tipo)){
-        $comando = 'mysqli_stmt_bind_param'
-        $comando .=
-        $comando .=
-        $comando .=
+        $comando = 'mysqli_stmt_bind_parram($stmt,';
+        $comando .= "." . implode('',tipo). "'"; 
+        $comando .= ', $' . implode(', $', $campos_criterio);
+        $comando .= ');';
+
+        eval($comando);
     }
+
+    mysqli_stmt_execute($stmt);
+
+    if($result = mysqli_stmt_get_result($stmt)){
+        $retorno = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        mysqli_free_result($result);
+    }
+
+    $_SESSION['errors'] = mysqli_stmt_error_list($stmt);
+
+    mysqli_stmt_close($stmt);
+
+    desconecta($conexao);
+
+    $retorno = $retorno;
+
+    return $retorno;
 }
+?>
