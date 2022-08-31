@@ -77,7 +77,25 @@
                         $data = date_format($data, 'd/m/Y H:i:s');
                     ?>
                     <a class="list-group-item list-group-item-action"
-                       href="post_detalhe.php?post=<?php echo $post['id']?>"></a>
+                       href="post_detalhe.php?post=<?php echo $post['id']?>">
+                       <strong><?php echo $post['titulo']?></strong>
+                       [<?php echo $post['nome']?>]
+                       <span class="badge badge-dark"><?php echo $data?></span>
+                    </a>
+                    <?php endforeach; ?>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Rodapé //-->
+            <?php
+                include 'includes/rodape.php';
+            ?>
+        </div>
+    </div>
+</div>
+<script src="lib/bootstrap-4.2.1-dist/js/bootstrap.,in.js"></script>
     </body>
 </html>
