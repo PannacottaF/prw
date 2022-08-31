@@ -52,9 +52,22 @@
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $post['titulo']?></h5>
                         <h5 class="card-subtitle mb-2 text-muted">
-                            
+                            <?php echo $data_post?> Por <?php echo $post['nome']?>
                         </h5>
+                        <div class="card-text">
+                            <?php echo html_entity_decode($post['texto']) ?>
                     </div>
-            </div>
                 </div>
-        </html>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <?php
+                    include 'includes/rodape.php';
+                ?>
+            </div>
+        </div>
+    </div>
+    <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
