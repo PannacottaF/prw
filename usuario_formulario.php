@@ -57,8 +57,28 @@
                         require="required" id="email" name="email"
                         value="<?php echo $entidade['email'] ?? '' ?>">
                 </div>
-
+                <?php if (!isset($_SESSION['login'])): ?>
+                    <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input class="form-control" type="password"
+                        require="required" id="senha" name="senha">
+                </div>
+                <?php endif; ?>
+                <div class="text-right">
+                    <button class="btn btn-success"
+                             type="submit">Salvar</button>
+        </div>
+        </form>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <?php
+                    include 'includes/rodape.php';
+                ?>
+            </div>
+        </div>
     </div>
-    </div>
+    <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
