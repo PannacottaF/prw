@@ -66,6 +66,12 @@
                         <?php echo $entidade['texto'] ?? '' ?>
                     </textarea>
                 </div>
+                <div class="form-group">
+                    <label for="texto">Postar em</label>
+                    <?php
+                        $data = (!empty($entidade['data_postagem']))?
+                            explode('', $entidade['data_postagem'])[0] : '';
+
 
     </body>
 </html>
