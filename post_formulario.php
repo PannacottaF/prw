@@ -90,6 +90,15 @@
                                 name="hora_postagem"
                                 value="<?php echo $hora ?>">  
                         </div> 
+                    </div>
+                </div>
+                <div class="text-right">
+                    <button class="btn btn-success"
+                             type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
     </body>
