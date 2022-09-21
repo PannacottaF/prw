@@ -30,5 +30,17 @@
                         require_once 'core/conexao_mysql.php';
                         require_once 'core/sql.php';
                         require_once 'core/mysql.php';
+
+                        foreach($_GET as $indice => $dado){
+                            $$indice = limparDados($dado);
+                        }
+
+                        $data_atual = date('Y-m-d H:i:s');
+
+                        $criterio = [];
+
+                        if(!empty($busca)){
+                            $criterio[] = ['nome', 'like', "%{$busca}%"];
+                        }
         </div>
 </html>
