@@ -77,6 +77,10 @@
                             ?>
                             <tr>
                                 <td><?php echo $entidade['nome']?></td>
+                                <td><?php echo $entidade['email']?></td>
+                                <td><?php echo $data?></td>
+                                <td><a href='core/usuario_repositorio.php?acao=status&id=<?php echo $entidade['id']?>
+                                &valor=<?php echo  !$entidade['ativo']?>'
 
         </div>
 </html>
