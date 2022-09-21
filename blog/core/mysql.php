@@ -46,7 +46,7 @@ function atualiza(string $entidade, array $dados, array $criterio = []): bool
         $dado = $expressao[count($expresao) - 1];
 
         $tipo[] = gettype($dado)[0];
-        $expressao[count(expressao) - 1] = '?';
+        $expressao[count($expressao) - 1] = '?';
         $coringa_criterio[] = $expressao;
 
         $nome_campo = (count($expressao) < 4) ? $expressao[0] : $expressao[1];
@@ -98,7 +98,7 @@ function deleta(string $entidade, array $criterio = []) : bool
     foreach ($criterio as $expressao) {
         $dado = $expressao[count($expressao) - 1];
 
-        $tipo[] = gettype($dados)[0];
+        $tipo[] = gettype($dado)[0];
         $expressao[count($expressao) - 1] = '?';
         $coringa_criterio[] = $expressao;
 
@@ -169,7 +169,7 @@ string $ordem = null) : array
 
     if(isset($tipo)){
         $comando = 'mysqli_stmt_bind_parram($stmt,';
-        $comando .= "." . implode('',tipo). "'"; 
+        $comando .= "." . implode('', $tipo). "'"; 
         $comando .= ', $' . implode(', $', $campos_criterio);
         $comando .= ');';
 
