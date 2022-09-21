@@ -42,5 +42,41 @@
                         if(!empty($busca)){
                             $criterio[] = ['nome', 'like', "%{$busca}%"];
                         }
+
+                        $result = buscar(
+                            'usuario',
+                            [
+                                'id',
+                                'nome',
+                                'email',
+                                'data_criacao',
+                                'ativo',
+                                'adm',
+                            ],
+                            $criterio,
+                            'data_criacao DESC, nome ASC'
+                        );
+
+                    ?>
+                    <table class="table table-bordered table-hover table-striped
+                                    table-responsavel{-sm|-md|-lg|-xl}">
+                        <thead>
+                            <tr>
+                                <td>Nome</td>
+                                <td>E-mail</td>
+                                <td>Data cadastro</td>
+                                <td>Ativo</td>
+                                <td>Administrador</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                foreach($result as $entidade):
+                                    $data = date_cremate($entidade['data_criacao']);
+                                    $data = date_format($data, 'd/m/Y H:i:s');
+                            ?>
+                            <tr>
+                                <td><?php echo $entidade['nome']?></td>
+
         </div>
 </html>
