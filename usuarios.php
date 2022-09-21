@@ -86,6 +86,19 @@
                                 &valor=<?php echo  !entidade['adm']?>'><?php echo ($entidade['adm']==1) ? 'Rebaixar'
                                 : 'Promover'; ?> </a></td>
                             </tr>
-
-        </div>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php 
+                            include 'includes/rodape.php';
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    </body>
 </html>
