@@ -12,7 +12,7 @@
                     <?php
                         include 'includes/topo.php';
                         include 'includes/valida_login.php';
-                        if ($_SESSION['login']['usuario']['adm'] !==){
+                        if ($_SESSION['login']['usuario']['adm'] !==1){
                             header('Location: index.php');
                         }
                     ?>
@@ -22,7 +22,13 @@
                 <div class="col-md-12">
                     <?php include 'includes/menu.php'; ?>
                 </div>
-                <div class="col-md-10" style="padding-top: 50px
-            <h2>Usuario</h2>
+                <div class="col-md-10" style="padding-top: 50px;">
+                    <h2>Usuario</h2>
+                    <?php include 'includes/busca.php'; ?>
+                    <?php
+                        require_once 'includes/funcoes.php';
+                        require_once 'core/conexao_mysql.php';
+                        require_once 'core/sql.php';
+                        require_once 'core/mysql.php';
         </div>
 </html>
