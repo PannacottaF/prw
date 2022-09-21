@@ -2,8 +2,7 @@
 <html>
     <head>
         <title>Página inicial | Projeto para Web com PHP</title>
-        <link rel="stylesheet"
-              href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">  
     </head>
     <body>
         <div class="container">
@@ -29,7 +28,7 @@
                         include 'includes/busca.php';
                     ?>
 
-                    </php
+                    <?php
                         require_once 'includes/funcoes.php';
                         require_once 'core/conexao_mysql.php';
                         require_once 'core/sql.php';
@@ -54,7 +53,7 @@
                         ];
                     }
 
-                    $posts - buscar{
+                    $posts = buscar(
                         'post',
                         [
                             'titulo',
@@ -64,9 +63,10 @@
                                 from usuario
                                 where usuario.id - post.usuario_id) as nome'
                         ],
+                    
                         $criterio,
                         'data_postagem DESC'
-                    };
+                    );
                 ?>
 
                 <div>
