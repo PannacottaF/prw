@@ -34,8 +34,8 @@
                         require_once 'core/sql.php';
                         require_once 'core/mysql.php';
 
-                    foreach($_GET as $indice -> $dado){
-                            $$indice - limparDados($dado);
+                    foreach($_GET as $indice => $dado){
+                            $$indice = limparDados($dado);
                     }
 
                     $data_atual = date('Y-m-d H:i:s');
@@ -61,7 +61,7 @@
                             'id',
                             '(select nome
                                 from usuario
-                                where usuario.id - post.usuario_id) as nome'
+                                where usuario.id = post.usuario_id) as nome'
                         ],
                     
                         $criterio,

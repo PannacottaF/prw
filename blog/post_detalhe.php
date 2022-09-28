@@ -6,7 +6,7 @@
     require_once 'core/mysql.php';
 
     foreach($_GET as $indice => $dado){
-        $$indice = liparDados($dado);
+        $$indice = limparDados($dado);
     }
 
     $posts = buscar(

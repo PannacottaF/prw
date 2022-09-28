@@ -2,13 +2,13 @@
 
 function insert (string $entidade, array $dados) : string
 {
-    $instrucao = "INSERT INTO {entidade}";
+    $instrucao = "INSERT INTO {$entidade}";
 
     $campos = implode(', ', array_keys($dados));
     $valores = implode(', ', array_values($dados));
 
-    $instrucao .= "({$campos})";
-    $instrucao .= "VALUES ({$valores})";
+    $instrucao .= " ({$campos})";
+    $instrucao .= " VALUES ({$valores})";
 
     return $instrucao;
 }
@@ -49,11 +49,10 @@ function delete(string $entidade, array $criterio = []) : string
     return $expressao;
 }
 
-function select(string $entidade, array $campos, array $criterios = [],
-string $ordem = $null) : string
+function select(string $entidade, array $campos, array $criterio = [], string $ordem = null) : string
 {
-    $intrucao = "SELECT " . implode(', ' ,$campos);
-    $instrucao .= "FROM {$entidade}";
+    $instrucao = "SELECT " . implode(', ' ,$campos);
+    $instrucao .= " FROM {$entidade}";
 
     if(!empty($criterio)){
         $instrucao .= ' WHERE ';
@@ -64,7 +63,7 @@ string $ordem = $null) : string
     }
 
     if(!empty($ordem)){
-        $instrucao .= " ORDEM BY $ordem ";
+        $instrucao .= " ORDER BY $ordem ";
     }
 
     return $instrucao;
